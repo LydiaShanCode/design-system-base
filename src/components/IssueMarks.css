@@ -1,0 +1,62 @@
+.b-status,
+.b-priority {
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.b-status[data-status="backlog"] {
+  stroke: var(--status-backlog);
+}
+
+.b-status__ring {
+  stroke: var(--status-todo);
+  transition: stroke var(--duration-base) ease;
+}
+
+.b-status__pie {
+  stroke: var(--status-progress);
+  stroke-dasharray: 0 100;
+  transition: stroke-dasharray var(--duration-slow) var(--ease-out);
+}
+
+.b-status[data-status="progress"] .b-status__ring {
+  stroke: var(--status-progress);
+}
+
+.b-status[data-status="progress"] .b-status__pie {
+  stroke-dasharray: 50 100;
+}
+
+.b-status[data-status="done"] circle {
+  fill: var(--status-done);
+}
+
+.b-status[data-status="canceled"] circle {
+  fill: var(--status-canceled);
+}
+
+.b-status[data-status="done"] path,
+.b-status[data-status="canceled"] path {
+  stroke: var(--bg-surface);
+}
+
+.b-priority rect {
+  fill: var(--icon-faint);
+}
+
+.b-priority[data-level="0"] rect {
+  fill: var(--icon-default);
+}
+
+.b-priority rect[data-on] {
+  fill: var(--icon-default);
+}
+
+.b-priority[data-level="4"] rect {
+  fill: var(--warning);
+}
+
+.b-priority[data-level="4"] .b-priority__mark {
+  fill: var(--bg-surface);
+}

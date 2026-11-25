@@ -1,0 +1,75 @@
+.b-input {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: var(--control-md);
+  padding: 0 10px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  background: var(--bg-raised);
+  color: var(--text-primary);
+  transition:
+    border-color var(--duration-fast) ease,
+    box-shadow var(--duration-fast) ease;
+}
+
+.b-input[data-size="lg"] {
+  height: var(--control-lg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .b-input:hover:not([data-disabled]) {
+    border-color: var(--border-strong);
+  }
+}
+
+.b-input:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.b-input[data-invalid] {
+  border-color: var(--danger);
+}
+
+.b-input[data-invalid]:focus-within {
+  box-shadow: 0 0 0 3px var(--danger-soft);
+}
+
+.b-input[data-disabled] {
+  background: var(--bg-canvas);
+  opacity: 0.6;
+}
+
+.b-input__field {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font: var(--text-small);
+}
+
+.b-input__field::placeholder {
+  color: var(--text-tertiary);
+}
+
+.b-input__icon,
+.b-input__trailing {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: var(--icon-default);
+}
+
+.b-input__icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.b-input__trailing {
+  margin-right: -4px;
+}

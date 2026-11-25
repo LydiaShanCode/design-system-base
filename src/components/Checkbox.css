@@ -1,0 +1,86 @@
+.b-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-primary);
+  font: var(--text-small);
+  cursor: pointer;
+  user-select: none;
+}
+
+.b-checkbox[data-disabled] {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.b-checkbox__box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-xs);
+  background: var(--bg-raised);
+  cursor: inherit;
+  transition:
+    background-color var(--duration-fast) ease,
+    border-color var(--duration-fast) ease,
+    transform var(--duration-base) var(--ease-out);
+}
+
+.b-checkbox__box:active:not(:disabled) {
+  transform: scale(0.92);
+}
+
+.b-checkbox__box:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--bg-surface), 0 0 0 4px var(--focus-ring);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .b-checkbox:hover .b-checkbox__box[data-state="off"] {
+    border-color: var(--text-tertiary);
+  }
+}
+
+.b-checkbox__box[data-state="on"],
+.b-checkbox__box[data-state="mixed"] {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.b-checkbox__box svg {
+  overflow: visible;
+  fill: none;
+  stroke: var(--text-on-accent);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.b-checkbox__check {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset var(--duration-base) var(--ease-out);
+}
+
+.b-checkbox__box[data-state="on"] .b-checkbox__check {
+  stroke-dashoffset: 0;
+}
+
+.b-checkbox__dash {
+  opacity: 0;
+}
+
+.b-checkbox__box[data-state="mixed"] .b-checkbox__dash {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .b-checkbox__check {
+    transition: none;
+  }
+}

@@ -1,0 +1,150 @@
+/* Base tokens. Light is the default; dark is the same names under
+   [data-theme="dark"]. Warm-neutral grays in one family, color kept for
+   the accent, status marks and labels. */
+
+:root {
+  color-scheme: light;
+
+  /* Surfaces, from the window well up to floating menus */
+  --bg-well: #ececeb;
+  --bg-canvas: #f5f5f4;
+  --bg-surface: #fdfdfc;
+  --bg-raised: #ffffff;
+  --bg-hover: #f1f1f0;
+  --bg-selected: #e9e9e7;
+  --bg-overlay: rgba(28, 28, 26, 0.18);
+
+  /* Text */
+  --text-primary: #1d1d1c;
+  --text-secondary: #6c6c69;
+  --text-tertiary: #a2a29e;
+  --text-on-accent: #ffffff;
+
+  /* Icons */
+  --icon-default: #7a7a76;
+  --icon-faint: #b9b9b5;
+
+  /* Borders */
+  --border-faint: #efefee;
+  --border-default: #e6e6e4;
+  --border-strong: #d6d6d3;
+
+  /* Accent */
+  --accent: #5e6ad2;
+  --accent-hover: #5461c8;
+  --accent-soft: rgba(94, 106, 210, 0.14);
+  --accent-text: #4f5bc4;
+  --focus-ring: rgba(94, 106, 210, 0.42);
+
+  /* Status */
+  --status-backlog: #b4b4b0;
+  --status-todo: #a8a8a4;
+  --status-progress: #e5b400;
+  --status-done: #5e6ad2;
+  --status-canceled: #a2a29e;
+  --danger: #e5484d;
+  --danger-soft: rgba(229, 72, 77, 0.12);
+  --danger-text: #d1343a;
+  --warning: #f2994a;
+
+  /* Labels */
+  --label-red: #eb5757;
+  --label-orange: #f2994a;
+  --label-yellow: #f2c94c;
+  --label-green: #4cb782;
+  --label-teal: #26b5ce;
+  --label-blue: #4ea7fc;
+  --label-indigo: #5e6ad2;
+  --label-purple: #bb87fc;
+  --label-gray: #95a2b3;
+
+  /* Type */
+  --font-sans: "Inter Variable", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --weight-normal: 400;
+  --weight-medium: 510;
+  --weight-semibold: 590;
+  --weight-bold: 680;
+
+  --title-1: 600 32px/38px var(--font-sans);
+  --title-2: 590 24px/30px var(--font-sans);
+  --title-3: 590 20px/26px var(--font-sans);
+  --title-4: 590 17px/24px var(--font-sans);
+  --text-large: 400 15px/24px var(--font-sans);
+  --text-regular: 400 14px/20px var(--font-sans);
+  --text-small: 400 13px/20px var(--font-sans);
+  --text-mini: 400 12px/16px var(--font-sans);
+  --text-micro: 400 11px/16px var(--font-sans);
+  --code-regular: 400 13px/20px var(--font-mono);
+  --code-small: 400 12px/18px var(--font-mono);
+
+  /* Radius. A child inside a rounded parent is always smaller than it. */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Elevation */
+  --shadow-low: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-medium: 0 0 0 1px rgba(0, 0, 0, 0.07), 0 8px 18px -8px rgba(0, 0, 0, 0.08), 0 24px 56px -16px rgba(0, 0, 0, 0.16);
+  --shadow-high: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 16px 32px -12px rgba(0, 0, 0, 0.14), 0 40px 80px -24px rgba(0, 0, 0, 0.24);
+
+  /* Density */
+  --control-sm: 24px;
+  --control-md: 28px;
+  --control-lg: 32px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --duration-fast: 120ms;
+  --duration-base: 160ms;
+  --duration-slow: 200ms;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg-well: #0b0b0b;
+  --bg-canvas: #0e0e0e;
+  --bg-surface: #121212;
+  --bg-raised: #1c1c1c;
+  --bg-hover: #1a1a1a;
+  --bg-selected: #222221;
+  --bg-overlay: rgba(0, 0, 0, 0.5);
+
+  --text-primary: #ededec;
+  --text-secondary: #8d8d8a;
+  --text-tertiary: #636361;
+  --text-on-accent: #ffffff;
+
+  --icon-default: #8d8d8a;
+  --icon-faint: #4d4d4b;
+
+  --border-faint: #1c1c1b;
+  --border-default: #242423;
+  --border-strong: #2e2e2d;
+
+  --accent: #5e6ad2;
+  --accent-hover: #6b77dd;
+  --accent-soft: rgba(94, 106, 210, 0.24);
+  --accent-text: #8f98ff;
+  --focus-ring: rgba(113, 122, 230, 0.55);
+
+  --status-backlog: #696967;
+  --status-todo: #a8a8a5;
+  --status-progress: #f0bf00;
+  --status-done: #5e6ad2;
+  --status-canceled: #636361;
+  --danger: #eb5757;
+  --danger-soft: rgba(235, 87, 87, 0.16);
+  --danger-text: #ff7a7a;
+  --warning: #f2994a;
+
+  --shadow-low: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-medium: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 8px 20px -8px rgba(0, 0, 0, 0.5), 0 24px 60px -12px rgba(0, 0, 0, 0.7);
+  --shadow-high: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 16px 36px -12px rgba(0, 0, 0, 0.6), 0 40px 90px -24px rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,29 @@
+.b-kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xs);
+  background: var(--bg-raised);
+  color: var(--text-secondary);
+  font: var(--text-micro);
+  font-weight: var(--weight-medium);
+  font-family: var(--font-sans);
+  box-shadow: 0 1px 0 var(--border-default);
+}
+
+.b-kbd[data-size="sm"] {
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  font-size: 10px;
+  box-shadow: none;
+}
+
+.b-shortcut {
+  display: inline-flex;
+  gap: 3px;
+}

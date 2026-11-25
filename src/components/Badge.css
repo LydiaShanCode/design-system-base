@@ -1,0 +1,44 @@
+.b-badge {
+  display: inline-flex;
+  align-items: center;
+  height: 18px;
+  padding: 0 6px;
+  border-radius: var(--radius-xs);
+  background: var(--bg-selected);
+  color: var(--text-secondary);
+  font: var(--text-micro);
+  font-weight: var(--weight-medium);
+  white-space: nowrap;
+}
+
+.b-badge[data-tone="accent"] {
+  background: var(--accent-soft);
+  color: var(--accent-text);
+}
+
+.b-badge[data-tone="danger"] {
+  background: var(--danger-soft);
+  color: var(--danger-text);
+}
+
+.b-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 22px;
+  padding: 0 8px 0 7px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-full);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  font: var(--text-mini);
+  font-weight: var(--weight-medium);
+  white-space: nowrap;
+}
+
+.b-label__dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+}

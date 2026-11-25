@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "cv01", "ss03";
+}
+
+body {
+  margin: 0;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font: var(--text-small);
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-feature-settings: inherit;
+}
+
+::selection {
+  background: var(--accent-soft);
+}

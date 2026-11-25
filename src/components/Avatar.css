@@ -1,0 +1,70 @@
+.b-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: var(--radius-full);
+  background: hsl(var(--hue) 52% 56%);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: var(--weight-semibold);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  user-select: none;
+}
+
+.b-avatar[data-size="16"] {
+  font-size: 8px;
+}
+
+.b-avatar[data-size="24"] {
+  font-size: 10px;
+}
+
+.b-avatar[data-size="32"] {
+  font-size: 12px;
+}
+
+.b-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.b-avatar--empty {
+  background: none;
+}
+
+.b-avatar--empty svg {
+  stroke: var(--icon-faint);
+  fill: var(--icon-faint);
+}
+
+.b-avatar--empty svg circle:first-child {
+  fill: none;
+}
+
+.b-avatar--more {
+  background: var(--bg-selected);
+  color: var(--text-secondary);
+  font-weight: var(--weight-medium);
+}
+
+.b-avatar-group {
+  display: inline-flex;
+  align-items: center;
+}
+
+.b-avatar-group > .b-avatar {
+  box-shadow: 0 0 0 2px var(--bg-surface);
+}
+
+.b-avatar-group > .b-avatar + .b-avatar {
+  margin-left: -4px;
+}
+
+.b-avatar-group[data-size="32"] > .b-avatar + .b-avatar {
+  margin-left: -6px;
+}
