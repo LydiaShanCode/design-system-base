@@ -945,3 +945,43 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
+
+/* Markdown pages (design-engineering.md) */
+
+.ds-md__section {
+  margin-top: 40px;
+}
+
+.ds-md__p,
+.ds-md__ul {
+  max-width: 600px;
+  margin: 0 0 12px;
+  color: var(--text-secondary);
+  font: var(--text-regular);
+}
+
+.ds-md__ul {
+  padding-left: 18px;
+}
+
+.ds-md__ul li + li {
+  margin-top: 4px;
+}
+
+.ds-md__inline {
+  padding: 1px 5px;
+  border-radius: var(--radius-sm, 4px);
+  background: var(--bg-canvas);
+  color: var(--text-primary);
+  font: var(--code-small);
+}
+
+.ds-md__link {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ds-md__code {
+  margin: 4px 0 16px;
+}

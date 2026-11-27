@@ -1,5 +1,6 @@
 import type { ComponentType } from 'react'
 import { CheckMotion, MenuMotion, PressMotion, ToggleMotion, TooltipMotion } from './pages/animations'
+import { DesignEngineering } from './pages/designEngineering'
 import { Brand, Colors, Radius, Shadows } from './pages/foundations'
 import {
   AvatarPage,
@@ -73,6 +74,10 @@ export const GROUPS: Group[] = [
       { slug: 'tabs', title: 'Tabs', Component: TabsPage },
       { slug: 'tooltip', title: 'Tooltip', Component: TooltipPage },
     ],
+  },
+  {
+    title: 'Design engineering',
+    pages: [{ slug: 'design-engineering', title: 'Tips and snippets', Component: DesignEngineering }],
   },
 ]
 
