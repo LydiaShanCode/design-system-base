@@ -3,3 +3,4 @@ dist
 design-system/node_modules
 design-system/dist
 .DS_Store
+.vercel
